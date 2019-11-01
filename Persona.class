@@ -1,0 +1,15 @@
+class Persona {
+    private nombre:string
+    private edad:number
+    private NSS:string
+    private peso:number
+    private altura:number
+    private static readonly sexo:string = "H"
+
+
+    constructor(nombre, edad, sexo){
+        this.nombre = nombre
+        this.edad = edad
+        this.sexo = sexo
+    }
+}

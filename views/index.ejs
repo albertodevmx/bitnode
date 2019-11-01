@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="./../assets/css/styles.css">
+
+	<title>Formulario</title>
+</head>
+
+<body>
+
+
+	<!-- As a heading -->
+	<nav class="navbar navbar-dark bg-primary shadow">
+		<span class="navbar-brand mb-0 h1">Navbar</span>
+	</nav>
+
+
+	<div class="container p-1 p-md-3">
+		<div class="col-12 col-md-6 p-2">
+
+			<div class="card shadow">
+				<div class="card-header bg-primary text-light">
+					Llene el formulario para obtener su IMC
+				</div>
+				<div class="card-body">
+					<form action="procesar" method="POST">
+						<div class="form-group">
+							<label for="nombre">Nombre</label>
+							<input type="text" class="form-control" id="nombre" name="nombre"
+								placeholder="Escriba el nombre ...">
+						</div>
+
+						<div class="form-group">
+							<label for="edad">Edad</label>
+							<input type="text" class="form-control" id="edad" name="edad"
+								placeholder="Escriba la edad ...">
+						</div>
+
+						<div class="form-group">
+							<label for="edad">Sexo</label>
+							<input type="text" class="form-control" id="sexo" name="sexo"
+								placeholder="Escriba la edad ...">
+						</div>
+
+						<div class="form-group">
+							<label for="peso">Peso</label>
+							<input type="text" class="form-control" id="peso" name="peso"
+								placeholder="Escriba la edad ...">
+						</div>
+
+						<div class="form-group">
+							<label for="altura">Altura</label>
+							<input type="text" class="form-control" id="altura" name="altura"
+								placeholder="Escriba la edad ...">
+						</div>
+
+						<button type="submit" class="btn btn-primary">Enviar</button>
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-12 col-md-6">
+			<% if(1==2){ %>
+				Si hay render
+			<% } %>
+		</div>
+	</div>
+</body>
+
+</html>
