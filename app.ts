@@ -2,7 +2,7 @@
 import express = require('express');
 import bodyParser = require('body-parser');
 import session = require('cookie-session');
-import { Persona } from './persona';
+import { Persona } from './Persona';
 var data:any = {}
 
 
