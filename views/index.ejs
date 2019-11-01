@@ -17,61 +17,201 @@
 
 	<!-- As a heading -->
 	<nav class="navbar navbar-dark bg-primary shadow">
-		<span class="navbar-brand mb-0 h1">Navbar</span>
+		<span class="navbar-brand mb-0 h1">e-Bitware Examen</span>
 	</nav>
 
 
 	<div class="container p-1 p-md-3">
-		<div class="col-12 col-md-6 p-2">
+		<div class="row">
+			<div class="col-12 col-md-6 p-2 p-md-3">
 
-			<div class="card shadow">
-				<div class="card-header bg-primary text-light">
-					Llene el formulario para obtener su IMC
-				</div>
-				<div class="card-body">
-					<form action="procesar" method="POST">
-						<div class="form-group">
-							<label for="nombre">Nombre</label>
-							<input type="text" class="form-control" id="nombre" name="nombre"
-								placeholder="Escriba el nombre ...">
-						</div>
+				<div class="card shadow">
+					<div class="card-header bg-primary text-light">
+						Llene el formulario para obtener su IMC
+					</div>
+					<div class="card-body">
+						<form action="procesar" method="POST">
+							<div class="form-group">
+								<label for="nombre">Nombre</label>
+								<input type="text" class="form-control" id="nombre" name="nombre"
+									placeholder="Escriba el nombre ...">
+							</div>
 
-						<div class="form-group">
-							<label for="edad">Edad</label>
-							<input type="text" class="form-control" id="edad" name="edad"
-								placeholder="Escriba la edad ...">
-						</div>
+							<div class="form-group">
+								<label for="edad">Edad</label>
+								<input type="text" class="form-control" id="edad" name="edad"
+									placeholder="Escriba la edad ...">
+							</div>
 
-						<div class="form-group">
-							<label for="edad">Sexo</label>
-							<input type="text" class="form-control" id="sexo" name="sexo"
-								placeholder="Escriba la edad ...">
-						</div>
+							<div class="form-group">
+								<label for="edad">Sexo</label>
+								<input type="text" class="form-control" id="sexo" name="sexo"
+									placeholder="Escriba la edad ...">
+							</div>
 
-						<div class="form-group">
-							<label for="peso">Peso</label>
-							<input type="text" class="form-control" id="peso" name="peso"
-								placeholder="Escriba la edad ...">
-						</div>
+							<div class="form-group">
+								<label for="peso">Peso</label>
+								<input type="text" class="form-control" id="peso" name="peso"
+									placeholder="Escriba la edad ...">
+							</div>
 
-						<div class="form-group">
-							<label for="altura">Altura</label>
-							<input type="text" class="form-control" id="altura" name="altura"
-								placeholder="Escriba la edad ...">
-						</div>
+							<div class="form-group">
+								<label for="altura">Altura</label>
+								<input type="text" class="form-control" id="altura" name="altura"
+									placeholder="Escriba la edad ...">
+							</div>
 
-						<button type="submit" class="btn btn-primary">Enviar</button>
-					</form>
+							<button type="submit" class="btn btn-primary">Enviar</button>
+						</form>
+					</div>
 				</div>
 			</div>
-		</div>
 
-		<div class="col-12 col-md-6">
-			<% if(1==2){ %>
-				Si hay render
-			<% } %>
-		</div>
-	</div>
+			<div class="col-12 col-md-6  p-2 p-md-3">
+				<% if (data.objeto1) { %>
+				<div class="card shadow mb-3">
+					<div class="card-header text-light bg-primary">
+						<%= data.objeto1.titulo %>
+					</div>
+					<div class="card-body">
+
+						<% if(data.objeto1.pesoIdeal == -1) { %>
+						<div class="alert alert-info" role="alert">
+							<% } %>
+
+							<% if(data.objeto1.pesoIdeal == 0) { %>
+							<div class="alert alert-success" role="alert">
+								<% } %>
+
+								<% if(data.objeto1.pesoIdeal == 1) { %>
+								<div class="alert alert-danger" role="alert">
+									<% } %>
+									<ul>
+										<li>
+											<% if(data.objeto1.pesoIdeal == -1) { %>
+											<b class="text-info">Está bajo de peso</b>
+											<% } %>
+											<% if(data.objeto1.pesoIdeal == 0) { %>
+											<b class="text-success">Está en su peso ideal</b>
+											<% } %>
+											<% if(data.objeto1.pesoIdeal == 1) { %>
+											<b class="text-danger">Tiene sobrepeso</b>
+											<% } %>
+										</li>
+
+										<li>
+											<% if(data.objeto1.esMayorDeEdad == true) { %>
+											Es mayor de edad
+											<% } else { %>
+											Es menor de edad
+											<% } %>
+										</li>
+									</ul>
+								</div>
+
+								<%- data.objeto1.informacion %>
+							</div>
+						</div>
+						<% } %>
+
+
+						<% if (data.objeto2) { %>
+						<div class="card shadow mb-3">
+							<div class="card-header text-light bg-primary">
+								<%= data.objeto2.titulo %>
+							</div>
+							<div class="card-body">
+
+								<% if(data.objeto2.pesoIdeal == -1) { %>
+								<div class="alert alert-info" role="alert">
+									<% } %>
+
+									<% if(data.objeto2.pesoIdeal == 0) { %>
+									<div class="alert alert-success" role="alert">
+										<% } %>
+
+										<% if(data.objeto2.pesoIdeal == 1) { %>
+										<div class="alert alert-danger" role="alert">
+											<% } %>
+											<ul>
+												<li>
+													<% if(data.objeto2.pesoIdeal == -1) { %>
+													<b class="text-info">Está bajo de peso</b>
+													<% } %>
+													<% if(data.objeto2.pesoIdeal == 0) { %>
+													<b class="text-success">Está en su peso ideal</b>
+													<% } %>
+													<% if(data.objeto2.pesoIdeal == 1) { %>
+													<b class="text-danger">Tiene sobrepeso</b>
+													<% } %>
+												</li>
+
+												<li>
+													<% if(data.objeto2.esMayorDeEdad == true) { %>
+													Es mayor de edad
+													<% } else { %>
+													Es menor de edad
+													<% } %>
+												</li>
+											</ul>
+										</div>
+
+										<%- data.objeto2.informacion %>
+									</div>
+								</div>
+								<% } %>
+
+
+								<% if (data.objeto3) { %>
+								<div class="card shadow mb-3">
+									<div class="card-header text-light bg-primary">
+										<%= data.objeto3.titulo %>
+									</div>
+									<div class="card-body">
+
+										<% if(data.objeto3.pesoIdeal == -1) { %>
+										<div class="alert alert-info" role="alert">
+											<% } %>
+
+											<% if(data.objeto3.pesoIdeal == 0) { %>
+											<div class="alert alert-success" role="alert">
+												<% } %>
+
+												<% if(data.objeto3.pesoIdeal == 1) { %>
+												<div class="alert alert-danger" role="alert">
+													<% } %>
+													<ul>
+														<li>
+															<% if(data.objeto3.pesoIdeal == -1) { %>
+															<b class="text-info">Está bajo de peso</b>
+															<% } %>
+															<% if(data.objeto3.pesoIdeal == 0) { %>
+															<b class="text-success">Está en su peso ideal</b>
+															<% } %>
+															<% if(data.objeto3.pesoIdeal == 1) { %>
+															<b class="text-danger">Tiene sobrepeso</b>
+															<% } %>
+														</li>
+
+														<li>
+															<% if(data.objeto3.esMayorDeEdad == true) { %>
+															Es mayor de edad
+															<% } else { %>
+															Es menor de edad
+															<% } %>
+														</li>
+													</ul>
+												</div>
+
+												<%- data.objeto3.informacion %>
+											</div>
+										</div>
+										<% } %>
+
+
+									</div>
+								</div>
+							</div>
 </body>
 
 </html>

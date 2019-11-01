@@ -19,9 +19,9 @@ $cyan:    #17a2b8 !default;
 @import "./../../../node_modules/bootstrap/scss/mixins";
 
 // Optional
-// @import "./../../../node_modules/bootstrap/scss/root";
+@import "./../../../node_modules/bootstrap/scss/root";
 @import "./../../../node_modules/bootstrap/scss/reboot";
-// @import "./../../../node_modules/bootstrap/scss/type";
+@import "./../../../node_modules/bootstrap/scss/type";
 
 
 
@@ -44,10 +44,10 @@ $cyan:    #17a2b8 !default;
 // @import "./../../../node_modules/bootstrap/scss/pagination";
 // @import "./../../../node_modules/bootstrap/scss/badge";
 // @import "./../../../node_modules/bootstrap/scss/jumbotron";
-// @import "./../../../node_modules/bootstrap/scss/alert";
+@import "./../../../node_modules/bootstrap/scss/alert";
 // @import "./../../../node_modules/bootstrap/scss/progress";
 // @import "./../../../node_modules/bootstrap/scss/media";
-// @import "./../../../node_modules/bootstrap/scss/list-group";
+@import "./../../../node_modules/bootstrap/scss/list-group";
 // @import "./../../../node_modules/bootstrap/scss/close";
 // @import "./../../../node_modules/bootstrap/scss/toasts";
 // @import "./../../../node_modules/bootstrap/scss/modal";
